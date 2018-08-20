@@ -16,6 +16,9 @@ git commit -m "Nom du commit"
 git status
 git log
 
+# Cloner repository Github par url
+git clone [url]
+
 # Envoyer sur Github (push)
 git push [nom-distant] [nom-branche]
 git push origin master
@@ -23,9 +26,6 @@ git push origin master
 # Récupérer modifications de Github (pull) 
 git pull [nom-distant] [nom-branche]
 git pull origin master
-
-# Cloner repository Github par utl
-git clone [url]
 
 
 
