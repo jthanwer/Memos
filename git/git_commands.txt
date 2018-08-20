@@ -1,0 +1,91 @@
+###############################
+### Créer un repository Git ###
+###############################
+
+# Initialiser Git
+git init
+
+# Ajouter fichiers au repository Git
+git add .
+git add file1 file2
+
+# Commit
+git commit -m "Nom du commit"
+
+# Historique et statut
+git status
+git log
+
+# Envoyer sur Github (push)
+git push [nom-distant] [nom-branche]
+git push origin master
+
+# Récupérer modifications de Github (pull) 
+git pull [nom-distant] [nom-branche]
+git pull origin master
+
+# Cloner repository Github par utl
+git clone [url]
+
+
+
+#########################
+### Gérer les commits ###
+#########################
+
+# Se placer sur un commit donné puis revenir au plus récent
+git checkout SHAducommit
+git checkout master
+
+# Créer un nouveau commit qui fait l'inverse
+git revert SHAducommit
+
+# Changer nom du commit
+git commit --amend -m "Nouveau message"
+
+# Annuler changements depuis le dernier commit
+git reset --hard
+
+
+
+##########################
+### Gérer les branches ###
+##########################
+
+# Checker les branches
+git branch
+
+# Créer nouvelle branche
+git branch nouvelle-branche
+
+# Se placer sur une branche
+git checkout nouvelle-branche
+
+# Merge une branche B dans une branche A
+git checkout brancheA
+git merge brancheB
+
+
+#########################
+### Gérer les remotes ###
+#########################
+
+# Checker les remotes
+git remote -v
+
+# Ajouter un remote
+git remote add [nom-court] [url]
+git remote add jthanwer https://github.com/jthanwer/mementos.git
+
+# Obtenir données manquantes du remote
+git fetch [nom-court]
+git fetch origin
+
+# Informations sur le remote
+git remove show [nom-court]
+git fetch origin
+
+
+
+
+
