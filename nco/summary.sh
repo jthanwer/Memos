@@ -20,7 +20,7 @@ ncks -O --mk_rec_dmn [dimension] [file_input] -O [file_output]
 ### NCWA ###
 ############
 
-Pour faire une moyenne
+# Pour faire une moyenne
 
 # Fait une moyenne sur la dimension donnée
 ncwa -C -v [var1],[var2] -d [dimension],[index_debut],[index_fin (pris en compte)] -a [dimension] [file_input] -O [file_output]
@@ -30,6 +30,8 @@ ncwa -C -v [var1],[var2] -d [dimension],[index_debut],[index_fin (pris en compte
 ### NCECAT ###
 ##############
 
+# Concatène quand il n'y pas de dimension record
+
 # Transforme la dimension en dimension record
 ncecat -u [dimension] [file_input] -O [file_output]
 
@@ -38,7 +40,7 @@ ncecat -u [dimension] [file_input] -O [file_output]
 ### NCRCAT ###
 ##############
 
-Concatène
+# Concatène quand il y a une dimension record
 
 # Concatène plusieurs fichiers
 ncrcat [file1] [file2] [file3] -O [file_output]
@@ -47,7 +49,7 @@ ncrcat [file1] [file2] [file3] -O [file_output]
 ### NCRENAME ###
 ################
 
-Renomme
+# Renomme
 
 # Renomme les variables sélectionnées
 ncrename -v [var1],[var2] [file_input]
