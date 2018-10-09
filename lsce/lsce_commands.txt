@@ -1,0 +1,2 @@
+ssh -X jthanwer@ssh1.lsce.ipsl.fr
+scp -r -p jthanwer@ssh1.lsce.ipsl.fr:scripts/ ~/Bureau/
