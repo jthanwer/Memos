@@ -1,4 +1,1 @@
-pandas-tuto2.ipynb
-pandas-tuto3.ipynb
-pandas-tuto4.ipynb
-.ipynb_checkpoints
+*.ipynb

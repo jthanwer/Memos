@@ -3,8 +3,8 @@ conda create -n [nom-environnement] python=[version] [packages]
 conda create -n py27 python=2.7 anaconda
 
 # Activer l'environnement
-source activate [nom-environnement]
-source activate py27
+conda activate [nom-environnement]
+conda activate py27
 
 # Désactiver l'environnement
-source deactivate
+conda deactivate

@@ -5,12 +5,15 @@
 # Initialiser Git
 git init
 
-# Ajouter fichiers au repository Git
+# Ajouter à l'index des fichiers
 git add .
 git add file1 file2
 
-# Commit
-git commit -m "Nom du commit"
+# Ajouter à l'index tous les fichiers modifiés
+git add -u 
+
+# Commit (et ajoute à l'index) tous les fichiers modifiés (ne fait rien par rapport aux nouveaux fichiers)
+git commit -a -m "Nom du commit"
 
 # Historique et statut
 git status
@@ -33,9 +36,8 @@ git pull origin master
 ### Gérer les commits ###
 #########################
 
-# Se placer sur un commit donné puis revenir au plus récent
+# Se placer sur un commit donné
 git checkout SHAducommit
-git checkout master
 
 # Créer un nouveau commit qui fait l'inverse
 git revert SHAducommit
@@ -43,8 +45,11 @@ git revert SHAducommit
 # Changer nom du commit
 git commit --amend -m "Nouveau message"
 
-# Annuler changements depuis le dernier commit
-git reset --hard
+# Annuler changements depuis le commit en question
+git reset --hard SHAducommit
+
+# Look on which commit we currently are
+git show -s
 
 
 
@@ -53,7 +58,7 @@ git reset --hard
 ##########################
 
 # Checker les branches
-git branch
+git branch -a
 
 # Créer nouvelle branche
 git branch nouvelle-branche
@@ -81,11 +86,18 @@ git remote add jthanwer https://github.com/jthanwer/mementos.git
 git fetch [nom-court]
 git fetch origin
 
-# Informations sur le remote
-git remove show [nom-court]
-git fetch origin
 
+##########################
+### Gérer l'indexation ###
+##########################
 
+# Voir les fichiers indexés
+git ls-files
 
+# Enlever un fichier de l'index
+git rm --cached [fichier]
+
+# Supprimer un fichier totalement
+git rm [fichier]
 
 

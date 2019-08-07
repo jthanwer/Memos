@@ -1,2 +1,10 @@
+# Se connecter en ssh
 ssh -X jthanwer@ssh1.lsce.ipsl.fr
+
+# Copier des fichiers distants sur le local
 scp -r -p jthanwer@ssh1.lsce.ipsl.fr:scripts/ ~/Bureau/
+
+# Monter le disque distant sur le local
+sshfs jthanwer@ssh1.lsce.ipsl.fr:/home/users/jthanwer/ /homel/jthanwer/Bureau/lsce_home/
+sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3 jthanwer@ssh1.lsce.ipsl.fr:/home /homen/
+
