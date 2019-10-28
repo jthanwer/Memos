@@ -1,0 +1,13 @@
+bash /homel/jthanwer/Téléchargements/Anaconda3-2019.07-Linux-x86_64.sh
+conda install -f -p /homel/jthanwer/anaconda3 conda=4.6.14
+conda config --set auto_update_conda False
+conda config --set allow_conda_downgrades true
+
+source .bashrc
+
+conda install netcdf4
+conda install xarray
+conda install cartopy
+conda install -c conda-forge xesmf 
+
+

@@ -1,0 +1,42 @@
+####################
+### Se connecter ###
+####################
+
+# S'identifier en tant que postgres
+sudo -i -u postgres
+
+# Entrer dans la database
+psql <database>
+
+# Quitter la session
+\q
+
+# Créer database
+createdb <database>
+
+# Supprimer database
+dropdb <database> 
+
+# Se connecter à une database en tant que <role>
+sudo -i -u <role> psql <database>
+
+# Créer un role
+sudo -i -u postgres createuser --interactive
+
+# Informations de connexion
+\conninfo
+
+#############################
+Supprimer la db et la recréer
+#############################
+
+sudo -i -u <role> dropdb <database>
+sudo -i -u <role> createdb <database>
+
+
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
+
+
+
+

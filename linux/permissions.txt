@@ -1,0 +1,23 @@
+drwxr-xr-x
+
+Il se traduit de la manière suivante :
+
+    d : c'est un répertoire.
+    rwx pour le 1er groupe de 3 symboles : son propriétaire peut lire, écrire et exécuter.
+    r-x pour le 2nd groupe de 3 symboles : le groupe peut uniquement lire et exécuter le fichier, sans pouvoir le modifier.
+    r-x pour le 3ème groupe de 3 symboles : le reste du monde peut uniquement lire et exécuter le fichier, sans pouvoir le modifier.
+
+
+# Passer au root
+sudo su
+
+# Donner les droits à jthanwer pour le répertoire <direc>
+sudo chown -R jthanwer ~/<direc>
+
+
+
+
+
+
+
+
