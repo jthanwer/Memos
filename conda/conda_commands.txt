@@ -8,3 +8,6 @@ conda activate py27
 
 # Désactiver l'environnement
 conda deactivate
+
+# Supprimer l'environnement
+conda env remove -n [nom-environnement]

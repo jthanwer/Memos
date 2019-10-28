@@ -66,8 +66,8 @@ git branch nouvelle-branche
 # Se placer sur une branche
 git checkout nouvelle-branche
 
-# Merge une branche B dans une branche A
-git checkout brancheA
+# Merge une brancheB dans master
+git checkout master
 git merge brancheB
 
 
@@ -85,6 +85,10 @@ git remote add jthanwer https://github.com/jthanwer/mementos.git
 # Obtenir données manquantes du remote
 git fetch [nom-court]
 git fetch origin
+
+# Changer remote
+git remote set-url [nom-court] [url]
+git remote set-url origin https://github.com/jthanwer/Memos.git 
 
 
 ##########################
