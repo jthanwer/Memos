@@ -45,12 +45,14 @@ git revert SHAducommit
 # Changer nom du commit
 git commit --amend -m "Nouveau message"
 
+# Ajouter nouveaux changements au précédent commit sans changer le nom
+git commit --amend --no-edit
+
 # Annuler changements depuis le commit en question
 git reset --hard SHAducommit
 
 # Look on which commit we currently are
 git show -s
-
 
 
 ##########################
@@ -103,5 +105,17 @@ git rm --cached [fichier]
 
 # Supprimer un fichier totalement
 git rm [fichier]
+
+##############
+### Rebase ###
+##############
+
+# Rebase une branche 'bug' sur la branche 'master'
+git checkout bug
+git rebase master
+
+# Mettre ensuite master au commit le plus récent
+git merge
+
 
 

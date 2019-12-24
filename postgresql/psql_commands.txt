@@ -34,6 +34,23 @@ sudo -i -u <role> dropdb <database>
 sudo -i -u <role> createdb <database>
 
 
+# Afficher les tables
+\dt
+
+# Supprimer une ligne
+DELETE FROM <table_name> (USING <another_table_name) WHERE <condition>;
+
+# Afficher les lignes d'une table
+SELECT * FROM <table_name>;
+
+# Afficher le type de contraintes
+SELECT
+    pg_describe_object(classid, objid, objsubid), 
+    pg_get_constraintdef(objid)
+FROM pg_depend 
+WHERE refobjid = <table_name>::regclass and deptype = 'n';
+
+
 
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
 
